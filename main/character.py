@@ -3,5 +3,7 @@ class Character:
     level = 1
     alive = True
 
-    def giveDamage(self, character):
-        character.health = character.health - 20
+    def giveDamage(self, character, damageAmount):
+        character.health = character.health - damageAmount
+        if character.health < 0:
+            character.health = 0
