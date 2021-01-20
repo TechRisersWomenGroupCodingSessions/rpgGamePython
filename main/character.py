@@ -5,5 +5,6 @@ class Character:
 
     def giveDamage(self, character, damageAmount):
         character.health = character.health - damageAmount
-        if character.health < 0:
+        if character.health <= 0:
             character.health = 0
+            character.alive = False
