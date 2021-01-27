@@ -74,3 +74,16 @@ class TestCharacter:
         character2.heals2(character2, 20)
         assert character1.health == 980
         assert character2.health == 620
+
+    def test_character_attacked_by_Level5_or_more(self):
+        character1 = Character()
+        character2 = Character()
+        character1.level = 6
+        character2.level = 1
+
+        character1.health = 100
+        character2.health = 100
+        character2.attacks(character1,20)
+        character1.attacks(character2, 20)
+        assert character1.health == 90
+        assert character2.health == 70
