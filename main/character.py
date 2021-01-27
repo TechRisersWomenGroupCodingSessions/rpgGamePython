@@ -13,5 +13,7 @@ class Character:
         if comrade.alive:
 
             comrade.health = comrade.health + healingAmount
+            if comrade.health >1000:
+                comrade.health = 1000
 
 

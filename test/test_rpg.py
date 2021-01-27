@@ -48,3 +48,10 @@ class TestCharacter:
         assert character1.health == 0
         assert character1.alive is False
 
+    def test_healing_cannot_raise_health_above_1000(self):
+        character1 = Character()
+        character2 = Character()
+
+        character2.health = 900
+        character1.heals(character2, 300)
+        assert character2.health == 1000
