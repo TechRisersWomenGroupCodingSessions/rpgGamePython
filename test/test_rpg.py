@@ -55,3 +55,11 @@ class TestCharacter:
         character2.health = 900
         character1.heals(character2, 300)
         assert character2.health == 1000
+
+    def test_character_cannot_self_harm(self):
+        character1 = Character()
+        character2 = Character()
+
+        character1.health = 980
+        character1.attacks(character1,20)
+        assert character1.health == 980

@@ -4,10 +4,11 @@ class Character:
     alive = True
 
     def attacks(self, opponent, damageAmount):
-        opponent.health = opponent.health - damageAmount
-        if opponent.health <= 0:
-            opponent.health = 0
-            opponent.alive = False
+        if self != opponent:
+            opponent.health = opponent.health - damageAmount
+            if opponent.health <= 0:
+                opponent.health = 0
+                opponent.alive = False
 
     def heals(self, comrade, healingAmount):
         if comrade.alive:
