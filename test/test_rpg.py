@@ -63,3 +63,14 @@ class TestCharacter:
         character1.health = 980
         character1.attacks(character1,20)
         assert character1.health == 980
+
+    def test_character_can_only_self_heal(self):
+        character1 = Character()
+        character2 = Character()
+
+        character1.health = 980
+        character2.health = 600
+        character2.heals2(character1, 20)
+        character2.heals2(character2, 20)
+        assert character1.health == 980
+        assert character2.health == 620

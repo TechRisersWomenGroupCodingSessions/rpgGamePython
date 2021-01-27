@@ -17,4 +17,9 @@ class Character:
             if comrade.health >1000:
                 comrade.health = 1000
 
+    def heals2(self, comrade, healingAmount):
+        if comrade.alive and self == comrade:
 
+            comrade.health = comrade.health + healingAmount
+            if comrade.health >1000:
+                comrade.health = 1000
