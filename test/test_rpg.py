@@ -15,7 +15,7 @@ class TestCharacter:
         character1 = Character()
         character2 = Character()
 
-        character1.giveDamage(character2, 20)
+        character1.attacks(character2, 20)
 
         assert character2.health == 980
 
@@ -24,7 +24,7 @@ class TestCharacter:
         character1 = Character()
         character2 = Character()
 
-        character1.giveDamage(character2, 1010)
+        character1.attacks(character2, 1010)
 
         assert character2.health == 0
         assert character2.alive is False
@@ -33,7 +33,7 @@ class TestCharacter:
         character1 = Character()
         character2 = Character()
 
-        character1.giveDamage(character2, 20)
+        character1.attacks(character2, 20)
         character1.heals(character2, 20)
 
         assert character2.health == 1000

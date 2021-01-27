@@ -3,7 +3,7 @@ class Character:
     level = 1
     alive = True
 
-    def giveDamage(self, opponent, damageAmount):
+    def attacks(self, opponent, damageAmount):
         opponent.health = opponent.health - damageAmount
         if opponent.health <= 0:
             opponent.health = 0
