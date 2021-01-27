@@ -37,3 +37,14 @@ class TestCharacter:
         character1.heals(character2, 20)
 
         assert character2.health == 1000
+
+    def test_dead_character_cannot_be_healed(self):
+        character1 = Character()
+        character2 = Character()
+        character1.health = 0
+        character1.alive = False
+        character2.heals(character1, 1)
+
+        assert character1.health == 0
+        assert character1.alive is False
+

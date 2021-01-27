@@ -10,5 +10,8 @@ class Character:
             opponent.alive = False
 
     def heals(self, comrade, healingAmount):
-        comrade.health = comrade.health + healingAmount
+        if comrade.alive:
+
+            comrade.health = comrade.health + healingAmount
+
 
