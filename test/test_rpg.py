@@ -103,7 +103,12 @@ class TestCharacter:
         character2 = Character()
         character1.range = 2
         character1.position = (0, 0)
-        character2.postition = (1,1)
+        character2.position = (1,1)
         character1.attacks(character2, 20)
         assert character1.health == 1000
         assert character2.health == 980
+
+    def test_character_change_type(self):
+        character1 = Character()
+        character1.type('melee')
+        assert character1.range == 2
