@@ -92,8 +92,8 @@ class TestCharacter:
         character1 = Character()
         character2 = Character()
         character1.range = 2
-        character1.position = 0
-        character2.position = 0
-        character1.attacks(character2,20)
+        character1.position = (4, 3)
+        character2.position = (3, -2)
+        character1.attacks(character2, 20)
         assert character1.health == 1000
-        assert character2.health == 980
+        assert character2.health == 1000
