@@ -87,3 +87,13 @@ class TestCharacter:
         character1.attacks(character2, 20)
         assert character1.health == 90
         assert character2.health == 70
+
+    def test_character_attack_max_range_melee(self):
+        character1 = Character()
+        character2 = Character()
+        character1.range = 2
+        character1.position = 0
+        character2.position = 0
+        character1.attacks(character2,20)
+        assert character1.health == 1000
+        assert character2.health == 980
