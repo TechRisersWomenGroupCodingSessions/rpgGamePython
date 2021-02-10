@@ -7,9 +7,10 @@ class Character:
     position = (0, 0)
 
     def type(self, fighter):
+        fighter = fighter.lower()
         if fighter =='melee':
             self.range = 2
-        else:
+        elif fighter == 'ranged':
             self.range = 20
 
     def attacks(self, opponent, damageAmount):
