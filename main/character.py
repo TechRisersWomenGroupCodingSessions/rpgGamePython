@@ -44,7 +44,7 @@ class Character:
         return distance <= self.range
 
 
-    def heals(self, comrade, healingAmount):
+    def heals3(self, comrade, healingAmount):
         if comrade.alive:
 
             comrade.health = comrade.health + healingAmount

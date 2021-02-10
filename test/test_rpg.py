@@ -29,21 +29,22 @@ class TestCharacter:
         assert character2.health == 0
         assert character2.alive is False
 
-    def test_character_can_heal_another_character(self):
-        character1 = Character()
-        character2 = Character()
-
-        character1.attacks(character2, 20)
-        character1.heals(character2, 20)
-
-        assert character2.health == 1000
+    # def test_character_can_heal_another_character(self):
+    #     character1 = Character()
+    #     character2 = Character()
+    #
+    #     character1.attacks(character2, 20)
+    #     character1.heals2(character2, 20)
+    #
+    #     assert character2.health == 1000
+    # we can delete this later if not needed
 
     def test_dead_character_cannot_be_healed(self):
         character1 = Character()
         character2 = Character()
         character1.health = 0
         character1.alive = False
-        character2.heals(character1, 1)
+        character2.heals2(character1, 1)
 
         assert character1.health == 0
         assert character1.alive is False
@@ -52,9 +53,9 @@ class TestCharacter:
         character1 = Character()
         character2 = Character()
 
-        character2.health = 900
-        character1.heals(character2, 300)
-        assert character2.health == 1000
+        character1.health = 900
+        character1.heals2(character1, 300)
+        assert character1.health == 1000
 
     def test_character_cannot_self_harm(self):
         character1 = Character()
