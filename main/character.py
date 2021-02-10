@@ -1,11 +1,16 @@
 
-
 class Character:
     health = 1000
     level = 1
     alive = True
     range = 0
     position = (0, 0)
+
+    def type(self, fighter):
+        if fighter =='melee':
+            self.range = 2
+        else:
+            self.range = 20
 
     def attacks(self, opponent, damageAmount):
 
@@ -30,10 +35,10 @@ class Character:
         c = position2[0]
         d = position2[1]
 
-        x = (c-a)**2
-        y = (d-b)**2
+        x = ( c -a )**2
+        y = ( d -b )**2
 
-        distance = (x+y)**0.5
+        distance = ( x +y )**0.5
 
         return distance <= self.range
 
