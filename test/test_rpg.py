@@ -137,5 +137,7 @@ class TestCharacter:
     def test_new_character_joins_a_faction(self):
         character1 = Character()
 
+        character1.join_faction('Titans')
+
         assert character1.faction == 'Titans'
 

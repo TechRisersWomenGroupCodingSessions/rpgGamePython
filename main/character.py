@@ -7,6 +7,9 @@ class Character:
     position = (0, 0)
     faction = None
 
+    def join_faction(self, faction):
+        self.faction = faction
+
     def type(self, fighter):
         fighter = fighter.lower()
         if fighter =='melee':
