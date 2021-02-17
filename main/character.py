@@ -7,6 +7,9 @@ class Character:
     position = (0, 0)
     faction = None
 
+    def leave_faction(self, faction):
+        self.faction.remove(faction)
+
     def join_faction(self, faction):
         self.faction = faction
 
