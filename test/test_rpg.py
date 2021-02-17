@@ -132,27 +132,27 @@ class TestCharacter:
     def test_new_character_no_faction(self):
         character1 = Character()
 
-        assert character1.faction == None
+        assert character1.factions == None
 
     def test_new_character_joins_a_faction(self):
         character1 = Character()
 
         character1.join_faction('Titans')
 
-        assert character1.faction == 'Titans'
+        assert character1.factions == 'Titans'
 
     def test_new_character_chooses_a_faction_from_multiple_options(self):
         character1 = Character()
 
         character1.join_faction(['Titans','Spartans'])
 
-        assert 'Titans' in character1.faction
-        assert 'Spartans' in character1.faction
+        assert 'Titans' in character1.factions
+        assert 'Spartans' in character1.factions
 
     def test_character_leaves_faction(self):
         character1 = Character()
-        character1.join_faction('Titans')
-        character1.leave_faction('Titans')
+        character1.join_faction(['Titans'])
+        character1.leave_faction(['Titans'])
 
-        assert 'Titans' not in character1.faction
+        assert 'Titans' not in character1.factions
 

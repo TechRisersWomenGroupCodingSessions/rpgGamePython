@@ -5,13 +5,15 @@ class Character:
     alive = True
     range = 0
     position = (0, 0)
-    faction = None
+    factions = None
 
-    def leave_faction(self, faction):
-        self.faction.remove(faction)
+    def leave_faction(self, factions):
+
+        for faction in factions:
+            self.factions.remove(faction)
 
     def join_faction(self, faction):
-        self.faction = faction
+        self.factions = faction
 
     def type(self, fighter):
         fighter = fighter.lower()
