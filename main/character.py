@@ -5,6 +5,7 @@ class Character:
     alive = True
     range = 0
     position = (0, 0)
+    faction = None
 
     def type(self, fighter):
         fighter = fighter.lower()

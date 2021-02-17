@@ -129,3 +129,8 @@ class TestCharacter:
         assert character1.health == 960
         assert character2.health == 1000
 
+    def test_new_character_no_faction(self):
+        character1 = Character()
+
+        assert character1.faction == None
+
