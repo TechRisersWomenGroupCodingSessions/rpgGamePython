@@ -141,3 +141,11 @@ class TestCharacter:
 
         assert character1.faction == 'Titans'
 
+    def test_new_character_chooses_a_faction_from_multiple_options(self):
+        character1 = Character()
+
+        character1.join_faction(['Titans','Spartans'])
+
+        assert 'Titans' in character1.faction
+        assert 'Spartans' in character1.faction
+
