@@ -175,10 +175,29 @@ class TestCharacter:
 
         assert character2.health == 1000
 
+    # def test_heal_allies(self):
+    #     character1 = Character()
+    #     character2 = Character() 
 
+    #     character1.join_faction(['Titans'])
+    #     character2.join_faction(['Titans'])
 
+    #     character2.health = 600
+    #     character1.heals(character2, 20)
 
+    #     assert character2.health == 620
 
+    # def test_should_not_heal_non_allies(self):
+    #     character1 = Character()
+    #     character2 = Character() 
+
+    #     character1.join_faction(['Titans'])
+    #     character2.join_faction(['Spartans'])
+
+    #     character2.health = 600
+    #     character1.heals(character2, 20)
+
+    #     assert character2.health = 600
 
 
 
