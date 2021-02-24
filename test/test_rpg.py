@@ -156,3 +156,11 @@ class TestCharacter:
 
         assert 'Titans' not in character1.factions
 
+    def test_characters_are_allies(self):
+        character1 = Character()
+        character2 = Character()
+
+        character1.join_faction(['Titans'])
+        character2.join_faction(['Titans'])
+
+        assert character1.allies(character2) is True
