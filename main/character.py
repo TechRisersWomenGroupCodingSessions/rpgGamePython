@@ -6,6 +6,7 @@ class Character:
     range = 0
     position = (0, 0)
     factions = None
+    allies = False
 
     def leave_faction(self, factions):
 
@@ -14,6 +15,12 @@ class Character:
 
     def join_faction(self, faction):
         self.factions = faction
+
+    def allies(self, character):
+        if self.factions == None or character.factions == None:
+            return False
+        else:
+            return any(item in self.factions for item in character.factions)
 
     def type(self, fighter):
         fighter = fighter.lower()
@@ -24,7 +31,7 @@ class Character:
 
     def attacks(self, opponent, damageAmount):
 
-        if self.isOpponentInRange(opponent):
+        if self.isOpponentInRange(opponent) and not self.allies(opponent):
             if opponent.level - self.level >= 5:
                 damageAmount = damageAmount * 0.5
             elif self.level - opponent.level >= 5:

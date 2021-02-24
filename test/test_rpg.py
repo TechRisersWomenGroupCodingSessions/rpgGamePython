@@ -164,3 +164,26 @@ class TestCharacter:
         character2.join_faction(['Titans'])
 
         assert character1.allies(character2) is True
+
+    def test_allies_cannot_deal_damage_to_one_another(self):
+        character1 = Character()
+        character2 = Character()
+
+        character1.join_faction(['Titans'])
+        character2.join_faction(['Titans'])
+        character1.attacks(character2, 20)
+
+        assert character2.health == 1000
+
+
+
+
+
+
+
+
+
+
+
+
+
