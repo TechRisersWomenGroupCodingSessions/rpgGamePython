@@ -175,6 +175,7 @@ class TestCharacter:
 
         assert character2.health == 1000
 
+    # failing because heals() only works with self
     # def test_heal_allies(self):
     #     character1 = Character()
     #     character2 = Character() 
