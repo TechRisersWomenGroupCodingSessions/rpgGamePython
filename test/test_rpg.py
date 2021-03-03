@@ -199,6 +199,12 @@ class TestCharacter:
 
         assert character2.health == 600
 
+    def test_props_are_destroyed_when_health_zero(self):
+        object1 = Prop()
+        object1.health = 0
+
+        assert object1.destroyed == True
+
 
 
 
