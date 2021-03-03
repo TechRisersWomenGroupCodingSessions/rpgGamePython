@@ -51,7 +51,6 @@ class TestCharacter:
 
     def test_healing_cannot_raise_health_above_1000(self):
         character1 = Character()
-        character2 = Character()
 
         character1.health = 900
         character1.heals(character1, 300)
@@ -163,7 +162,7 @@ class TestCharacter:
         character1.join_faction(['Titans'])
         character2.join_faction(['Titans'])
 
-        assert character1.allies(character2) is True
+        assert character1.is_ally(character2) is True
 
     def test_allies_cannot_deal_damage_to_one_another(self):
         character1 = Character()
@@ -176,29 +175,29 @@ class TestCharacter:
         assert character2.health == 1000
 
     # failing because heals() only works with self
-    # def test_heal_allies(self):
-    #     character1 = Character()
-    #     character2 = Character() 
+    def test_heal_allies(self):
+        character1 = Character()
+        character2 = Character()
 
-    #     character1.join_faction(['Titans'])
-    #     character2.join_faction(['Titans'])
+        character1.join_faction(['Titans'])
+        character2.join_faction(['Titans'])
 
-    #     character2.health = 600
-    #     character1.heals(character2, 20)
+        character2.health = 600
+        character1.heals(character2, 20)
 
-    #     assert character2.health == 620
+        assert character2.health == 620
 
-    # def test_should_not_heal_non_allies(self):
-    #     character1 = Character()
-    #     character2 = Character() 
+    def test_should_not_heal_non_allies(self):
+        character1 = Character()
+        character2 = Character()
 
-    #     character1.join_faction(['Titans'])
-    #     character2.join_faction(['Spartans'])
+        character1.join_faction(['Titans'])
+        character2.join_faction(['Spartans'])
 
-    #     character2.health = 600
-    #     character1.heals(character2, 20)
+        character2.health = 600
+        character1.heals(character2, 20)
 
-    #     assert character2.health = 600
+        assert character2.health == 600
 
 
 

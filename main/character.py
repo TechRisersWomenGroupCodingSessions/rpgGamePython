@@ -16,7 +16,7 @@ class Character:
     def join_faction(self, faction):
         self.factions = faction
 
-    def allies(self, character):
+    def is_ally(self, character):
         if self.factions == None or character.factions == None:
             return False
         else:
@@ -31,7 +31,7 @@ class Character:
 
     def attacks(self, opponent, damageAmount):
 
-        if self.isOpponentInRange(opponent) and not self.allies(opponent):
+        if self.isOpponentInRange(opponent) and not self.is_ally(opponent):
             if opponent.level - self.level >= 5:
                 damageAmount = damageAmount * 0.5
             elif self.level - opponent.level >= 5:
@@ -69,7 +69,7 @@ class Character:
     # we may delete this later
 
     def heals(self, comrade, healingAmount):
-        if comrade.alive and self == comrade:
+        if comrade.alive and (self == comrade or self.is_ally(comrade)):
 
             comrade.health = comrade.health + healingAmount
             if comrade.health > 1000:
