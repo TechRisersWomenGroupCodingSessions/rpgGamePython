@@ -1,5 +1,5 @@
 from main.character import Character
-
+from main.object import Object
 
 class TestCharacter:
 
@@ -199,12 +199,19 @@ class TestCharacter:
 
         assert character2.health == 600
 
-    def test_props_are_destroyed_when_health_zero(self):
-        object1 = Prop()
-        object1.health = 0
+    # def test_props_are_destroyed_when_health_zero(self):
+    #     object1 = Prop()
+    #     object1.health = 0
+    #
+    #     assert object1.destroyed == True
 
-        assert object1.destroyed == True
+    def objects_cannot_be_healed(self):
+        object1 = prop()
+        object1.health = 100
+        character1 = Character()
+        character1.heals(object1, 20)
 
+        assert object1.health == 100
 
 
 
