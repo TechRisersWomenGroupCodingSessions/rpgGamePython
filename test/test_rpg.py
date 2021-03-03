@@ -1,5 +1,5 @@
 from main.character import Character
-
+from main.prop import Prop
 
 class TestCharacter:
 
