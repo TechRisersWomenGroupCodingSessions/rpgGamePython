@@ -205,6 +205,13 @@ class TestCharacter:
 
         assert object1.destroyed == True
 
+    def objects_cannot_be_healed(self):
+        object1 = prop()
+        object1.health = 100
+        character1 = Character()
+        character1.heals(object1, 20)
+
+        assert object1.health == 100
 
 
 
