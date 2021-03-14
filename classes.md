@@ -6,16 +6,20 @@ Data values within an object are called _attributes_ and functions within the cl
 
 ## Table of Contents
 
-- [Creating a Class]()
-  - [The init function]()
-  - [self]()
-  - [Pass statement]()
-  - [Deleting object properties]()
-  - [Modifying object properties]()
-- [Getters and Setters]()
-  - [@ property]()
-- [Inheritance]()
-- [References]()
+- [Creating a Class](#creating-a-class)
+  - [The init function](#the-init-function)
+  - [self](#self)
+  - [Pass statement](#pass-statement)
+  - [Deleting object properties](#deleting-object-properties)
+  - [Modifying object properties](#modifying-object-properties)
+- [Getters and Setters](#getters-and-setters)
+  - [@ property](#property)
+- [Inheritance](#inheritance)
+  - [Overriding)[#overriding]
+  - [Adding method to a child](#adding-methods-to-the-child)
+  - [Useful in-built functions](#useful-in-built-functions)
+- [References](#references)
+- [Possible Extensions](#possible-extensions)
 
 ## Creating a Class
 
