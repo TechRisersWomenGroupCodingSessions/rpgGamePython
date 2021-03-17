@@ -147,6 +147,15 @@ class TestCharacter:
 
         assert 'Titans' in character1.factions
         assert 'Spartans' in character1.factions
+    
+    def test_multiple_faction_options(self):
+        character1 = Character()
+
+        character1.join_faction(['Titans','Spartans'])
+        character1.join_faction(['Romans'])
+        assert 'Titans' in character1.factions
+        assert 'Spartans' in character1.factions
+        assert 'Romans' in character1.factions
 
     def test_character_leaves_faction(self):
         character1 = Character()

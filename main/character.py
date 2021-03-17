@@ -5,16 +5,15 @@ class Character:
     alive = True
     range = 0
     position = (0, 0)
-    factions = None
+    factions = []
     allies = False
 
     def leave_faction(self, factions):
 
         for faction in factions:
             self.factions.remove(faction)
-
     def join_faction(self, faction):
-        self.factions = faction
+        self.factions += faction
 
     def is_ally(self, character):
         if self.factions == None or character.factions == None:
