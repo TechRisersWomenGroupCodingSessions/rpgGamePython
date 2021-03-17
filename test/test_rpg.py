@@ -214,9 +214,12 @@ class TestCharacter:
 
         assert object1.health == 100
 
+    # this test is not needed at the moment
+    # def test_objects_cannot_deal_damaged(self):
+    #     object1 = Prop()
+    #     character = Character()
 
-
-
+    #     object1.attack()
 
 
 
