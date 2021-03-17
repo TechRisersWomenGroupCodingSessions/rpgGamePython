@@ -69,8 +69,9 @@ class Character:
     # we may delete this later
 
     def heals(self, comrade, healingAmount):
-        if comrade.alive and (self == comrade or self.is_ally(comrade)):
+        if isinstance(comrade,Character):
+            if comrade.alive and (self == comrade or self.is_ally(comrade)):
 
-            comrade.health = comrade.health + healingAmount
-            if comrade.health > 1000:
-                comrade.health = 1000
+                comrade.health = comrade.health + healingAmount
+                if comrade.health > 1000:
+                    comrade.health = 1000
