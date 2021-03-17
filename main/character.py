@@ -42,6 +42,10 @@ class Character:
                     opponent.health = 0
                     opponent.alive = False
 
+    def damageprop(self, prop,damageAmount):
+
+        prop.health = prop.health - damageAmount
+
     def isOpponentInRange(self, opponent):
         position1 = self.position
         position2 = opponent.position

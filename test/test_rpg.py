@@ -221,5 +221,11 @@ class TestCharacter:
 
     #     object1.attack()
 
+    def test_objects_can_be_damaged(self):
+        object1 = Prop()
+        object1.health = 100
+        character1 = Character()
+        character1.damageprop(object1, 20)
 
+        assert object1.health == 80
 
