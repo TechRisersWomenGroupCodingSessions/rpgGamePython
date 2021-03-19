@@ -15,7 +15,7 @@ Data values within an object are called _attributes_ and functions within the cl
 - [Getters and Setters](#getters-and-setters)
   - [@ property](#property)
 - [Inheritance](#inheritance)
-  - [Overriding)[#overriding]
+  - [Overriding](#overriding)
   - [Adding method to a child](#adding-methods-to-the-child)
   - [Useful in-built functions](#useful-in-built-functions)
 - [References](#references)
@@ -208,17 +208,17 @@ Python has two built-in functions that work with inheritance:
 
 ## References:
 
-(Python docs - classes)[https://docs.python.org/3/tutorial/classes.html] 
-(Python PEP 8 Standard - naming conventions)[https://www.python.org/dev/peps/pep-0008/#id34] PEP 8 is a widely used style guide within the Python community, published by the Python Software Foundation
-Two summaries of the PEP 8 Standard Naming Conventions
-- (University of Colorado Earth Lab)[https://www.earthdatascience.org/courses/intro-to-earth-data-science/write-efficient-python-code/intro-to-clean-code/python-pep-8-style-guide/]
-- (Medium article - 10 Points you should know)[https://medium.com/@dasagrivamanu/python-naming-conventions-the-10-points-you-should-know-149a9aa9f8c7]
-(w3schools - classes)[https://www.w3schools.com/python/python_classes.asp]
-(w3schools - inheritance)[https://www.w3schools.com/python/python_inheritance.asp]
-(Python docs  - property)[https://docs.python.org/3/library/functions.html#property]
-(freeCodeCamp - python property decorator)[https://www.freecodecamp.org/news/python-property-decorator/]
-(3 Types of Python Methods - instance, static, class)[https://www.makeuseof.com/tag/python-instance-static-class-methods/]
-(Programiz python tutorials - easy to read and understand)[https://www.programiz.com/python-programming/class]
+1. [Python docs - classes](https://docs.python.org/3/tutorial/classes.html)
+2. [Python PEP 8 Standard - naming conventions](https://www.python.org/dev/peps/pep-0008/#id34) PEP 8 is a widely used style guide within the Python community, published by the Python Software Foundation
+3. Two summaries of the PEP 8 Standard Naming Conventions
+    - [University of Colorado Earth Lab](https://www.earthdatascience.org/courses/intro-to-earth-data-science/write-efficient-python-code/intro-to-clean-code/python-pep-8-style-guide/)
+    - [Medium article - 10 Points you should know](https://medium.com/@dasagrivamanu/python-naming-conventions-the-10-points-you-should-know-149a9aa9f8c7)
+4. [w3schools - classes](https://www.w3schools.com/python/python_classes.asp)
+5. [w3schools - inheritance](https://www.w3schools.com/python/python_inheritance.asp)
+6. [Python docs  - property](https://docs.python.org/3/library/functions.html#property)
+7. [freeCodeCamp - python property decorator](https://www.freecodecamp.org/news/python-property-decorator/)
+8. [3 Types of Python Methods - instance, static, class](https://www.makeuseof.com/tag/python-instance-static-class-methods/)
+9. [Programiz python tutorials - easy to read and understand](https://www.programiz.com/python-programming/class)
 
 ## Possible extensions
 
