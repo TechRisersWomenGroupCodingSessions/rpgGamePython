@@ -131,14 +131,14 @@ class TestCharacter:
     def test_new_character_no_faction(self):
         character1 = Character()
 
-        assert character1.factions == None
+        assert character1.factions == []
 
     def test_new_character_joins_a_faction(self):
         character1 = Character()
 
         character1.join_faction('Titans')
 
-        assert character1.factions == 'Titans'
+        assert 'Titans' in character1.factions
 
     def test_new_character_chooses_a_faction_from_multiple_options(self):
         character1 = Character()
