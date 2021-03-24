@@ -1,12 +1,15 @@
 
 class Character:
-    health = 1000
-    level = 1
-    alive = True
-    range = 0
-    position = (0, 0)
-    factions = []
-    allies = False
+
+    def __init__(self):
+        self.health = 1000
+        self.level = 1
+        self.alive = True
+        self.range = 0
+        self.position = (0, 0)
+        self.factions = []
+        self.allies = False
+
 
     def leave_faction(self, factions):
 
