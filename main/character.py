@@ -83,3 +83,14 @@ class Character:
                     comrade.health = 1000
 
 #hello world
+
+class Melee(Character):
+    def __init__(self):
+        super().__init__()
+        self.range = 2
+
+class Ranged(Character):
+    def __init__(self):
+        super().__init__()
+        self.range = 20
+
