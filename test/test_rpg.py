@@ -223,7 +223,8 @@ class TestCharacter:
 
         assert object1.health == 100
 
-    # this test is not needed at the moment
+    # this test is not needed 
+    #this is testing for a feature that doesn't exist
     # def test_objects_cannot_deal_damaged(self):
     #     object1 = Prop()
     #     character = Character()
