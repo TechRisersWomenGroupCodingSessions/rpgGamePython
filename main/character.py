@@ -24,13 +24,6 @@ class Character:
         else:
             return any(item in self.factions for item in character.factions)
 
-    def type(self, fighter):
-        fighter = fighter.lower()
-        if fighter =='melee':
-            self.range = 2
-        elif fighter == 'ranged':
-            self.range = 20
-
     def attacks(self, opponent, damageAmount):
 
         if self.isOpponentInRange(opponent) and not self.is_ally(opponent):
