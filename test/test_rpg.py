@@ -1,4 +1,4 @@
-from main.character import Character
+from main.character import Character, Melee, Ranged
 from main.prop import Prop
 
 class TestCharacter:
@@ -108,18 +108,14 @@ class TestCharacter:
         assert character2.health == 980
 
     def test_character_change_type(self):
-        character1 = Character()
-        character2 = Character()
-        character1.type('melee')
-        character2.type('RAngeD')
+        character1 = Melee()
+        character2 = Ranged()
         assert character1.range == 2
         assert character2.range == 20
 
     def test_character_in_range_hurt(self):
-        character1 = Character()
-        character2 = Character()
-        character1.type('Melee')
-        character2.type('ranged')
+        character1 = Melee()
+        character2 = Ranged()
         character1.position = (0, 0)
         character2.position = (3, 3)
         character1.attacks(character2, 50)
