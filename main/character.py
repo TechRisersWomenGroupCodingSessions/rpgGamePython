@@ -1,15 +1,14 @@
+from dataclasses import dataclass, field
 
+@dataclass
 class Character:
-
-    def __init__(self):
-        self.health = 1000
-        self.level = 1
-        self.alive = True
-        self.range = 0
-        self.position = (0, 0)
-        self.factions = []
-        self.allies = False
-
+    health: int = 1000
+    level: int = 1
+    alive: bool = True
+    range: int = 0
+    position: tuple = (0, 0)
+    factions: list = field(default_factory=list)
+    allies: bool = False
 
     def leave_faction(self, factions):
 
@@ -31,7 +30,7 @@ class Character:
                 damageAmount = damageAmount * 0.5
             elif self.level - opponent.level >= 5:
                 damageAmount = damageAmount * 1.5
-            if self != opponent:
+            if self is not opponent:
                 opponent.health = opponent.health - damageAmount
                 if opponent.health <= 0:
                     opponent.health = 0

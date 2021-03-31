@@ -14,7 +14,8 @@ class TestCharacter:
     def test_take_damage(self):
         character1 = Character()
         character2 = Character()
-
+        print(character1)
+        print(character2)
         character1.attacks(character2, 20)
 
         assert character2.health == 980
