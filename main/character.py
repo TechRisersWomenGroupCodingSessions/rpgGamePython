@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 
+
 @dataclass
 class Character:
     health: int = 1000
@@ -11,9 +12,9 @@ class Character:
     allies: bool = False
 
     def leave_faction(self, factions):
-
         for faction in factions:
             self.factions.remove(faction)
+
     def join_faction(self, faction):
         self.factions += faction
 
@@ -24,7 +25,6 @@ class Character:
             return any(item in self.factions for item in character.factions)
 
     def attacks(self, opponent, damageAmount):
-
         if self.isOpponentInRange(opponent) and not self.is_ally(opponent):
             if opponent.level - self.level >= 5:
                 damageAmount = damageAmount * 0.5
@@ -36,8 +36,7 @@ class Character:
                     opponent.health = 0
                     opponent.alive = False
 
-    def damageprop(self, prop,damageAmount):
-
+    def damageprop(self, prop, damageAmount):
         prop.health = prop.health - damageAmount
 
     def isOpponentInRange(self, opponent):
@@ -50,39 +49,29 @@ class Character:
         c = position2[0]
         d = position2[1]
 
-        x = ( c -a )**2
-        y = ( d -b )**2
+        x = (c - a) ** 2
+        y = (d - b) ** 2
 
-        distance = ( x +y )**0.5
+        distance = (x + y) ** 0.5
 
         return distance <= self.range
 
-
-    # def heals3(self, comrade, healingAmount):
-    #     if comrade.alive:
-    #
-    #         comrade.health = comrade.health + healingAmount
-    #         if comrade.health > 1000:
-    #             comrade.health = 1000
-    # we may delete this later
-
     def heals(self, comrade, healingAmount):
-        if isinstance(comrade,Character):
+        if isinstance(comrade, Character):
             if comrade.alive and (self == comrade or self.is_ally(comrade)):
 
                 comrade.health = comrade.health + healingAmount
                 if comrade.health > 1000:
                     comrade.health = 1000
 
-#hello world
 
 class Melee(Character):
     def __init__(self):
         super().__init__()
         self.range = 2
 
+
 class Ranged(Character):
     def __init__(self):
         super().__init__()
         self.range = 20
-

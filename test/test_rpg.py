@@ -1,6 +1,7 @@
 from main.character import Character, Melee, Ranged
 from main.prop import Prop
 
+
 class TestCharacter:
 
     def test_new_character(self):
@@ -29,16 +30,6 @@ class TestCharacter:
         assert character2.health == 0
         assert character2.alive is False
 
-    # def test_character_can_heal_another_character(self):
-    #     character1 = Character()
-    #     character2 = Character()
-    #
-    #     character1.attacks(character2, 20)
-    #     character1.heals2(character2, 20)
-    #
-    #     assert character2.health == 1000
-    # we can delete this later if not needed
-
     def test_dead_character_cannot_be_healed(self):
         character1 = Character()
         character2 = Character()
@@ -60,7 +51,7 @@ class TestCharacter:
         character1 = Character()
 
         character1.health = 980
-        character1.attacks(character1,20)
+        character1.attacks(character1, 20)
         assert character1.health == 980
 
     def test_character_can_only_self_heal(self):
@@ -82,7 +73,7 @@ class TestCharacter:
 
         character1.health = 100
         character2.health = 100
-        character2.attacks(character1,20)
+        character2.attacks(character1, 20)
         character1.attacks(character2, 20)
         assert character1.health == 90
         assert character2.health == 70
@@ -102,7 +93,7 @@ class TestCharacter:
         character2 = Character()
         character1.range = 2
         character1.position = (0, 0)
-        character2.position = (1,1)
+        character2.position = (1, 1)
         character1.attacks(character2, 20)
         assert character1.health == 1000
         assert character2.health == 980
@@ -139,15 +130,15 @@ class TestCharacter:
     def test_new_character_chooses_a_faction_from_multiple_options(self):
         character1 = Character()
 
-        character1.join_faction(['Titans','Spartans'])
+        character1.join_faction(['Titans', 'Spartans'])
 
         assert 'Titans' in character1.factions
         assert 'Spartans' in character1.factions
-    
+
     def test_multiple_faction_options(self):
         character1 = Character()
 
-        character1.join_faction(['Titans','Spartans'])
+        character1.join_faction(['Titans', 'Spartans'])
         character1.join_faction(['Romans'])
         assert 'Titans' in character1.factions
         assert 'Spartans' in character1.factions
@@ -210,7 +201,6 @@ class TestCharacter:
 
         assert object1.is_prop_destroyed() == True
 
-
     def test_objects_cannot_be_healed(self):
         object1 = Prop()
         object1.health = 100
@@ -219,14 +209,6 @@ class TestCharacter:
 
         assert object1.health == 100
 
-    # this test is not needed 
-    #this is testing for a feature that doesn't exist
-    # def test_objects_cannot_deal_damaged(self):
-    #     object1 = Prop()
-    #     character = Character()
-
-    #     object1.attack()
-
     def test_objects_can_be_damaged(self):
         object1 = Prop()
         object1.health = 100
@@ -234,4 +216,3 @@ class TestCharacter:
         character1.damageprop(object1, 20)
 
         assert object1.health == 80
-
